@@ -1,13 +1,6 @@
 (function() {
   var app = angular.module('gemStore', []);
 
-  app.controller('GalleryController', function() {
-    this.current = 0;
-    this.setCurrent = function(newGallery) {
-      this.current = newGallery || 0;
-    };
-  });
-
   app.controller('StoreController', function() {
     this.products = gems;
   });
@@ -21,6 +14,13 @@
 
     this.isSet = function(tabName) {
       return this.tab === tabName;
+    };
+  });
+
+  app.controller('GalleryController', function() {
+    this.current = 0;
+    this.setCurrent = function(newGallery) {
+      this.current = newGallery || 0;
     };
   });
 
@@ -83,7 +83,7 @@
     images: [
       "images/gem-06.gif",
       "images/gem-07.gif",
-      "images/gem-09.gif"
+      "images/gem-08.gif"
     ],
     reviews: [{
       stars: 1,
