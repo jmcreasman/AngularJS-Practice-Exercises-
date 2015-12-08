@@ -34,10 +34,25 @@
     };
 
   });
-  app.directive("productDescription", function() {
+
+  app.directive("productDescriptions", function() {
     return {
       restrict: 'E',
-      templateUrl: "product-description.html"
+      templateUrl: "product-descriptions.html"
+    };
+  });
+
+  app.directive("productReviews", function() {
+    return {
+      restrict: 'E',
+      templateUrl: "product-reviews.html"
+    };
+  });
+
+  app.directive("productSpecs", function() {
+    return {
+      restrict: "A",
+      templateUrl: "product-specs.html"
     };
   });
 
