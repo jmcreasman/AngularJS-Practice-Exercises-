@@ -9,11 +9,11 @@
 </head>
 
 <body ng-controller="StoreController as store">
-  <div ng-hide="store.product.soldOut">
+  <div ng-hide="store.product.soldOut" ng-repeat="product in store.products">
     <h3>
-      {{store.product.name}}
+      {{product.name}}
       <em>
-        {{store.product.price}}
+        {{product.price}}
       </em>
     </h3>
     <button ng-show="store.product.canPurchase">Add to Cart</button>
