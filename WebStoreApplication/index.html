@@ -9,14 +9,25 @@
 </head>
 
 <body ng-controller="StoreController as store">
-  <div ng-hide="store.product.soldOut" ng-repeat="product in store.products">
-    <h3>
-      {{product.name}}
-      <em>
-        {{product.price}}
-      </em>
-    </h3>
-    <button ng-show="store.product.canPurchase">Add to Cart</button>
+  <!--  Products Container  -->
+  <div class="list-group">
+    <!--  Product Container  -->
+    <div class="list-group-item" ng-repeat="product in store.products">
+      <h3>
+        {{product.name}}
+        <em>{{product.price | currency}}</em>
+      </h3>
+      <!-- Image Gallery  -->
+      <div class="gallery" ng-show="product.images.length">
+        <div>
+          <img ng-src="{{product.images[0]}}" />
+        </div>
+        <ul>
+          <li ng-repeat="image in product.images">
+            <img ng-src="{{image}}" />
+          </li>
+        </ul>
+      </div>
   </div>
 </body>
 
