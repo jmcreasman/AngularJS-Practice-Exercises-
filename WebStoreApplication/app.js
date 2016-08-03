@@ -52,7 +52,7 @@
       images: [
         "images/gem-01.gif",
         "images/gem-03.gif",
-        "images/gem-04.gif"
+        "images/gem-04.gif",
       ],
       reviews: [{
         stars: 3,
@@ -76,7 +76,7 @@
       images: [
         "images/gem-06.gif",
         "images/gem-07.gif",
-        "images/gem-10.gif"
+        "images/gem-08.gif"
       ],
       reviews: [{
         stars: 1,
